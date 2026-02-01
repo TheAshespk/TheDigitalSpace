@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Digital Shelf</title>
+  <style>
+    /* Reset & basic styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f5f5f5; color: #333; }
+
+    /* NAVBAR */
+    nav {
+      background: #1e3c72;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h2 { color: white; font-size: 1.8rem; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: #ffdd57; }
+
+    /* HEADER / HERO */
+    header {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p.main-subtitle { font-size: 1.5rem; font-weight: bold; margin-bottom: 15px; }
+    header p.tagline { font-size: 1.1rem; opacity: 0.9; }
+
+    /* SECTIONS */
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    section h2 { text-align: center; margin-bottom: 40px; color: #1e3c72; }
+
+    /* GENRES CARDS */
+    .genres {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .genre-card {
+      background: white;
+      padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .genre-card:hover {
+      background: #eef3ff;
+      transform: translateY(-5px);
+    }
+
+    /* ARTICLES */
+    .articles {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .article-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .article-card:hover { transform: translateY(-3px); }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #1e3c72;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      nav ul { flex-direction: column; margin-top: 10px; }
+      nav ul li { margin-left: 0; margin-top: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <h2>The Digital Shelf</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#genres">Genres</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#payment">Payment Info</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER / HERO -->
+  <header id="home">
+    <h1>The Digital Shelf</h1>
+    <p class="main-subtitle">Read. Click. Enjoy.</p>
+    <p class="tagline">Discover ebooks, stories, and quotes in one place, anytime, anywhere.</p>
+  </header>
+
+  <!-- GENRES -->
+  <section id="genres">
+    <h2>Genres</h2>
+    <div class="genres">
+      <a href="#" class="genre-card">Mystery</a>
+      <a href="#" class="genre-card">Sci-Fi</a>
+      <a href="#" class="genre-card">Fiction</a>
+      <a href="#" class="genre-card">Non-Fiction</a>
+      <a href="#" class="genre-card">Adventure</a>
+      <a href="#" class="genre-card">Languages</a>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section id="articles">
+    <h2>Articles</h2>
+    <div class="articles">
+      <div class="article-card">
+        <h3>Coming Soon</h3>
+        <p>Articles related to reading, ebooks, and digital storytelling will appear here.</p>
+      </div>
+      <div class="article-card">
+        <h3>Stay Tuned</h3>
+        <p>We will share tips, guides, and news for book lovers and digital creators.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      The Digital Shelf is a curated platform for ebooks, stories, and quotes. 
+      Our mission is to make reading digital content simple, fun, and accessible to everyone.
+    </p>
+  </section>
+
+  <!-- PAYMENT INFO -->
+  <section id="payment">
+    <h2>Payment / Purchase Info</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      All ebooks are available for instant purchase. Payment options will include PayPal, 
+      Gumroad, and other secure methods to ensure a smooth buying experience.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2026 The Digital Shelf | All Rights Reserved
+  </footer>
+
+</body>
+</html>

@@ -1,18 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>THE DIGITAL SHELF - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <title>THE DIGITAL SHELF</title>
+  <style>
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: blue;
+      cursor: pointer;
+    }
+
+    section {
+      display: none; /* hide all sections by default */
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Navigation -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="ebooks.html">Ebooks</a>
-    <a href="contact.html">Contact</a>
+    <a onclick="showSection('Home')">Home</a>
+    <a onclick="showSection('About')">About</a>
+    <a onclick="showSection('Ebooks')">Ebook</a>
+    <a onclick="showSection('Contact')">Contact</a>
   </nav>
 
-  <h1>Welcome to The Digital Shelf</h1>
-  <p>This is the home page. Explore our content!</p>
+  <!-- Sections -->
+  <section id="Home">
+    <h1>Welcome to The Digital Shelf</h1>
+    <p>Start Exploring and choose your favourite one </p>
+  </section>
+
+  <section id="About">
+    <h2>About Us</h2>
+    <p>Started in 2026 , We are  a small company selling Ebooks which are unique and different . Written by us and sold by us </p>
+  </section>
+
+  <section id="Ebooks">
+    <h2>Ebooks</h2>
+    <p>We provide Ebooks of different Genre as listed below .</p>
+  </section>
+
+  <section id="Contact">
+    <h2>Contact</h2>
+    <p>You can contact us for Purchasing , Payments , Reviews and Work on Email "ayeshli836@gmail.com" or Instagram "TheDigitalShelf2026".
+        THANKS FOR CHOOSING US ! 
+        <br>
+        Make sure to drop reviews through any contact means mentioned aboved .
+    </p>
+  </section>
+
+  <!-- JS for switching sections -->
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(s => s.style.display = 'none'); // hide all
+      document.getElementById(id).style.display = 'block'; // show selected
+    }
+
+    // Show Home by default
+    showSection('Home');
+  </script>
+
 </body>
-</html>
+</html> 
